@@ -1,5 +1,101 @@
 @use "../../../../styles/variables.scss" as *;
 
-h1{
-    color: $colorPrimary;
+.containerHeader {
+    background-image: url(../../../../assets/background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .8rem;
+
+
+    padding: 2.5rem 10%;
+    // padding: 2.5rem 121px;
+
+
+    @media (max-width: 670px){
+        background-position: left center;
+        justify-content: center;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+
+        width: 26.0625rem;
+
+        @media (max-width: 670px){
+            align-items: center;
+        }
+
+        #logo {
+            width: 11.25rem;
+        }
+
+        h1 {
+            color: $colorTitle;
+
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+
+            @media (max-width: 670px){
+                text-align: center;
+            }
+        }
+
+        h1 strong {
+            color: $colorSecodary;
+        }
+
+        h2 {
+            color: $colorTitle;
+
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+
+        .blockLinksSocial {
+            display: flex;
+            gap: 1rem;
+
+            a {
+                display: inline-block;
+                padding: 0.625rem 1.5625rem;
+
+                background-color: $colorSecodary;
+                color: $colorWhite;
+
+                border: 1px solid transparent;
+                border-radius: 0.75rem;
+                transition: all .6s;
+
+                &:hover{
+                    color: $colorSecodary;
+                    background-color: $colorWhite;
+                    border: 1px solid $colorSecodary;
+                }
+            }
+        } 
+    }
+
+    #pets {
+        width: 31.0625rem;
+
+        @media (max-width: 1040px){
+            width: 24.8125rem;
+        }
+
+        @media (max-width: 800px){
+            width: 18.75rem;
+        }
+
+        @media (max-width: 670px){
+            display: none;
+        }
+    }
 }
