@@ -29,8 +29,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin: 0 auto;
-    max-width: 56.25rem;
+    margin: 5rem auto;
+    max-width: 52.25rem;
 
     .card {
         position: relative;
@@ -66,7 +66,7 @@
 
         p {
             width: 6.25rem;
-            margin: 1.5rem;
+            margin: 2rem;
             text-align: center;
             color: white;
             font-size: 1.3rem;
@@ -76,12 +76,58 @@
     }   
 }
 
+@media (max-width: 618px) {
+
+    .cardSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 5rem auto;
+        width: fit-content;
+    
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: 0.4s;
+            width: fit-content;
+            margin: 0 0 0 0;
+
+            img {
+                width: 18rem;
+                height: 10rem;
+                display: flex;
+                align-items: start;
+            }
+    
+            .cardDivision {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(-60deg, $colorPrimary 45%, transparent 20%); /* Fundo angular */
+                display: flex;
+                justify-content: end;
+                align-items: center; 
+            }
+    
+            p {
+                width: 6.25rem;
+                margin: 1.8rem;
+                text-align: center;
+                color: white;
+                font-size: 1.3rem;
+                font-weight: 600;    
+            }
+        }     
+    }
+}
+
 @media (max-width: 425px) {
 
     .cardSection {
         display: flex;
         flex-direction: column;
-        margin: 0.5rem auto;
+        margin: 0 auto;
         width: fit-content;
 
         .card {
@@ -91,7 +137,7 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0.625rem 0 2rem 0;
+            margin: 0 0 0 0;
 
             img {
                 width: 22rem;
@@ -137,7 +183,7 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0.625rem 0 2rem 0;
+            margin: 0 0 2rem 0;
 
             img {
                 width: 22rem;
@@ -183,7 +229,7 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0.625rem 0 2rem 0;
+            margin: 0 0 2rem 0;
 
             img {
                 width: 20rem;
@@ -234,7 +280,8 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0.625rem 0 2rem 0;
+            margin: 0 0 2rem 0;
+
             img {
                 width: 18rem;
                 height: 11rem;
