@@ -76,6 +76,52 @@
     }   
 }
 
+@media (max-width: 425px) {
+
+    .cardSection {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem auto;
+        width: fit-content;
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: 0.4s;
+            width: fit-content;
+            margin: 0.625rem 0 2rem 0;
+
+            img {
+                width: 22rem;
+                height: 11rem;
+                display: flex;
+                align-items: start;
+            }
+    
+            .cardDivision {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(-60deg, $colorPrimary 45%, transparent 20%); /* Fundo angular */
+                display: flex;
+                justify-content: end;
+                align-items: center; 
+            }
+    
+            p {
+                width: 6.25rem;
+                margin: 1.8rem;
+                text-align: center;
+                color: white;
+                font-size: 1.3rem;
+                font-weight: 600;    
+            }
+        }     
+    }
+}
+
 @media (max-width: 375px) {
 
     .cardSection {
