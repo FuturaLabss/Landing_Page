@@ -12,6 +12,7 @@
         text-align: center;
         color: $colorPrimary;
         font-family: $fontDefault;
+        text-wrap: nowrap;
     }
 
     span {
@@ -76,7 +77,7 @@
     }   
 }
 
-@media (max-width: 618px) {
+@media (max-width: 768px) {
 
     .cardSection {
         display: grid;
@@ -94,8 +95,55 @@
             margin: 0 0 0 0;
 
             img {
-                width: 18rem;
-                height: 10rem;
+                width: 22rem;
+                height: 11rem;
+                display: flex;
+                align-items: start;
+            }
+    
+            .cardDivision {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(-60deg, $colorPrimary 45%, transparent 20%); /* Fundo angular */
+                display: flex;
+                justify-content: end;
+                align-items: center; 
+            }
+    
+            p {
+                width: 6.25rem;
+                margin: 1.8rem;
+                text-align: center;
+                color: white;
+                font-size: 1.3rem;
+                font-weight: 600;    
+            }
+        }     
+    }
+}
+
+@media (max-width: 618px) {
+
+    .cardSection {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: fit-content;
+        gap: 0;
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: 0.4s;
+            width: fit-content;
+            margin: 0 0 5rem 0;
+
+            img {
+                width: 22rem;
+                height: 11rem;
                 display: flex;
                 align-items: start;
             }
@@ -129,6 +177,7 @@
         flex-direction: column;
         margin: 0 auto;
         width: fit-content;
+        gap: 0;
 
         .card {
             position: relative;
@@ -137,7 +186,7 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0 0 0 0;
+            margin: 0 0 4rem 0;
 
             img {
                 width: 22rem;
@@ -183,7 +232,7 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0 0 2rem 0;
+            margin: 0 0 4rem 0;
 
             img {
                 width: 22rem;
@@ -216,6 +265,12 @@
 
 @media (max-width: 320px) {
 
+    .titleSection {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+   
     .cardSection {
         display: flex;
         flex-direction: column;
@@ -229,7 +284,7 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0 0 2rem 0;
+            margin: 0 0 4rem 0;
 
             img {
                 width: 20rem;
@@ -261,11 +316,12 @@
 }
   
 @media (max-width: 280px) {
-    h1 {
-        line-height: 1;
-        margin-bottom: 1rem;
-    }
+    .titleSection {
 
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
 
     .cardSection {
         display: flex;
@@ -280,7 +336,7 @@
             cursor: pointer;
             transition: 0.4s;
             width: fit-content;
-            margin: 0 0 2rem 0;
+            margin: 0 0 4rem 0;
 
             img {
                 width: 18rem;
